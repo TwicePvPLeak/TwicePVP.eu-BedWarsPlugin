@@ -1,0 +1,32 @@
+package me.Bedwars.Commands;
+
+import me.Bedwars.Data.Data;
+import me.Bedwars.GameStatus.GameStatus;
+import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+
+public class Command_Restart
+  implements CommandExecutor
+{
+  public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3)
+  {
+    Player p = (Player)arg0;
+    if (p.isOp())
+    {
+      if (Data.status == GameStatus.LOBBY)
+      {
+        Data.countdown = 60;
+        Bukkit.broadcastMessage("§e***************************");
+        Bukkit.broadcastMessage("§6Countdown auf 60 gesetzt von§4 " + p.getName());
+        Bukkit.broadcastMessage("§e***************************");
+      }
+    }
+    else {
+      p.sendMessage("§cHAHHAH Klarrr");
+    }
+    return false;
+  }
+}

@@ -1,0 +1,18 @@
+name: Bedwars
+version: 1.2
+author: Tom_tomi14
+main: me.Bedwars.Main
+
+commands:
+     setlocation:
+        description: Locations
+     stats:
+        description: Statistiken
+     xyzhdu:
+        description: Teamauswahl
+     ranking:
+        description: Ranking
+     start:
+        description: Quickstart
+     countdown:
+        description: Countdown
